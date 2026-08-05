@@ -238,6 +238,20 @@ code {
     text-underline-offset: 2px;
 }
 
+/* матеріал ще не завантажено — рядок без посилання */
+.materials .row.is-missing {
+    color: #97918a;
+    cursor: default;
+}
+
+.materials .row.is-missing:hover { background: none; }
+
+.is-missing .m-ext {
+    border-style: dashed;
+    letter-spacing: 0.02em;
+    text-transform: none;
+}
+
 .m-num {
     flex: none;
     min-width: 1.8em;
