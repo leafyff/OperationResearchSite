@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сторінку не знайдено — Дослідження операцій</title>
+<!--
+  Стилі тут вписані просто в сторінку, а не підключені файлом: GitHub Pages
+  показує 404.html за будь-якою неіснуючою адресою, і відносний шлях до
+  css/style.css з такої адреси не спрацював би.
+
+  Якщо репозиторій називається НЕ username.github.io, сайт лежатиме за адресою
+  username.github.io/назва-репозиторію/ — тоді в посиланні нижче замініть
+  href="/" на href="/назва-репозиторію/".
+-->
+<style>
+  body { margin: 0; background: #fbfaf7; color: #332f2a;
+         font: 400 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+  header { background-color: #12263a;
+           background-image: linear-gradient(168deg, #1e4060 0%, #15304a 55%, #101f31 100%);
+           color: #e9edf1; }
+  header::after { content: ""; display: block; height: 4px;
+                  background: linear-gradient(90deg, #a8823a 0%, #d8bd7c 45%, #b98f3f 100%); }
+  .inner { display: flex; align-items: center; gap: 22px;
+           max-width: 840px; margin: 0 auto; padding: 42px 24px 34px; }
+  .mark { flex: none; width: 54px; height: 54px; color: #93a9bd; }
+  .eyebrow { margin: 0 0 9px; color: #bf9d55; font-size: 0.7rem; font-weight: 600;
+             letter-spacing: 0.14em; text-transform: uppercase; }
+  .site-title { font: 400 2.3rem/1.1 Georgia, "Times New Roman", serif;
+                letter-spacing: -0.012em; color: #fbfaf7; }
+  .site-title a { color: inherit; text-decoration: none; }
+  .site-sub { margin: 11px 0 0; font-size: 0.9rem; color: #9db0c2; }
+  main { max-width: 840px; margin: 0 auto; padding: 40px 24px 60px; }
+  h1 { margin: 0 0 6px; font: 400 1.75rem/1.25 Georgia, "Times New Roman", serif; color: #1f1d1a; }
+  .meta { margin: 0 0 1.6rem; color: #6e6961; font-size: 0.875rem; }
+  a { color: #1d3b56; }
+  @media (max-width: 640px) {
+    .inner { gap: 16px; padding: 30px 18px 24px; }
+    .mark { width: 42px; height: 42px; }
+    .site-title { font-size: 1.6rem; }
+    main { padding: 28px 18px 50px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+      <path d="M7 5V41H43" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".5"/>
+      <path d="M7 41V22L18 12L34 15L40 41Z" fill="rgba(255,255,255,.09)" stroke="#d8bd7c" stroke-width="1.6" stroke-linejoin="round"/>
+      <circle cx="18" cy="12" r="3" fill="#d8bd7c"/>
+    </svg>
+    <div>
+      <p class="eyebrow">Київський національний університет імені Тараса Шевченка</p>
+      <div class="site-title"><a href="/">Дослідження операцій</a></div>
+      <p class="site-sub">Факультет комп’ютерних наук та кібернетики</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>Сторінку не знайдено</h1>
+  <p class="meta">помилка 404</p>
+
+  <p>Такої сторінки або файла немає. Можливо, матеріал ще не завантажено
+     або посилання застаріло.</p>
+
+  <p><a href="/">Повернутися на головну</a></p>
+</main>
+
+</body>
+</html>

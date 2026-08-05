@@ -1,0 +1,407 @@
+/* Дослідження операцій — стилі сайту курсу */
+
+:root {
+    --paper:      #fbfaf7;
+    --surface:    #ffffff;
+    --ink:        #1f1d1a;
+    --text:       #332f2a;
+    --muted:      #6e6961;
+    --rule:       #ded8cd;
+    --rule-soft:  #ebe6dc;
+    --navy:       #1d3b56;
+    --gold:       #c8a761;
+    --hover:      #f4f1ea;
+
+    --serif: Georgia, "Times New Roman", "Liberation Serif", serif;
+    --sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Arial, sans-serif;
+
+    --measure: 840px;
+    --gutter:  24px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--text);
+    font: 400 17px/1.65 var(--sans);
+}
+
+.inner {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
+/* --- Шапка --------------------------------------------------------------- */
+
+.masthead {
+    background-color: #12263a;
+    background-image: linear-gradient(168deg, #1e4060 0%, #15304a 55%, #101f31 100%);
+    color: #e9edf1;
+}
+
+/* золота стрічка під шапкою */
+.masthead::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: linear-gradient(90deg, #a8823a 0%, #d8bd7c 45%, #b98f3f 100%);
+}
+
+.masthead .inner {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding-top: 42px;
+    padding-bottom: 34px;
+}
+
+/* схематична допустима область задачі лінійного програмування */
+.mark {
+    flex: none;
+    width: 54px;
+    height: 54px;
+    color: #93a9bd;
+}
+
+.eyebrow {
+    margin: 0 0 9px;
+    color: #bf9d55;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.site-title {
+    margin: 0;
+    font: 400 2.3rem/1.1 var(--serif);
+    letter-spacing: -0.012em;
+    color: #fbfaf7;
+}
+
+.site-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-title a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(216, 189, 124, 0.75);
+}
+
+.site-sub {
+    margin: 11px 0 0;
+    color: #9db0c2;
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+/* --- Навігація ----------------------------------------------------------- */
+
+.nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--rule);
+}
+
+.nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav a {
+    display: block;
+    margin-right: 26px;
+    padding: 14px 0 12px;
+    border-bottom: 2px solid transparent;
+    color: #4c483f;
+    font-size: 0.78rem;
+    letter-spacing: 0.09em;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.nav a:hover {
+    color: var(--navy);
+    border-bottom-color: var(--rule);
+}
+
+.nav a[aria-current="page"] {
+    color: var(--navy);
+    border-bottom-color: var(--gold);
+    font-weight: 600;
+}
+
+/* --- Основний текст ------------------------------------------------------ */
+
+main {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 40px var(--gutter) 60px;
+}
+
+h1 {
+    margin: 0 0 6px;
+    font: 400 1.75rem/1.25 var(--serif);
+    color: var(--ink);
+}
+
+h2 {
+    margin: 2.3rem 0 0.85rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--rule);
+    font: 400 1.35rem/1.3 var(--serif);
+    color: var(--ink);
+}
+
+h1 + .meta {
+    margin: 0 0 1.6rem;
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+p { margin: 0 0 1rem; }
+
+a {
+    color: var(--navy);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+a:hover { color: #0f2a42; }
+
+code {
+    padding: 1px 4px;
+    border-radius: 2px;
+    background: #f0ece3;
+    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+    font-size: 0.88em;
+}
+
+.note code { background: #ece6d9; }
+
+.lead {
+    font-family: var(--serif);
+    font-size: 1.09rem;
+    line-height: 1.6;
+    color: #2c2924;
+}
+
+.note {
+    margin: 1.6rem 0 0;
+    padding: 12px 16px;
+    border-left: 3px solid var(--gold);
+    background: #f6f3ec;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.note p { margin: 0; }
+
+/* --- Списки матеріалів --------------------------------------------------- */
+
+.materials {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--rule-soft);
+    list-style: none;
+}
+
+.materials li { border-bottom: 1px solid var(--rule-soft); }
+
+.materials .row {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 11px 10px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.materials .row:hover { background: var(--hover); }
+
+.materials .row:hover .m-title {
+    color: var(--navy);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.m-num {
+    flex: none;
+    min-width: 1.8em;
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.m-title { flex: 1 1 auto; }
+
+.m-author {
+    display: block;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.m-ext {
+    flex: none;
+    padding: 2px 7px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    color: var(--muted);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* --- Перелік розділів на головній ---------------------------------------- */
+
+.sections {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sections li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule-soft);
+}
+
+.sections li:first-child { border-top: 1px solid var(--rule-soft); }
+
+.sections a { font-weight: 600; }
+
+.sections span {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+/* --- Викладачі ----------------------------------------------------------- */
+
+.staff {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    row-gap: 4px;
+}
+
+.staff dt {
+    grid-column: 1;
+    padding-top: 1px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.staff dd {
+    grid-column: 2;
+    margin: 0;
+}
+
+/* відступ між групами «Лекції» / «Практичні заняття» */
+.staff dt:not(:first-of-type),
+.staff dt:not(:first-of-type) + dd { margin-top: 12px; }
+
+/* --- Підвал -------------------------------------------------------------- */
+
+footer {
+    border-top: 1px solid var(--rule);
+    background: #f5f2eb;
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+footer .inner {
+    padding-top: 24px;
+    padding-bottom: 30px;
+}
+
+footer p { margin: 0; }
+
+footer .org {
+    margin-top: 9px;
+    line-height: 1.5;
+}
+
+footer a { color: var(--navy); }
+
+/* --- Вузькі екрани ------------------------------------------------------- */
+
+@media (max-width: 640px) {
+    body { font-size: 16px; }
+
+    :root { --gutter: 18px; }
+
+    .masthead .inner {
+        gap: 16px;
+        padding-top: 30px;
+        padding-bottom: 24px;
+    }
+
+    .mark { width: 42px; height: 42px; }
+
+    .eyebrow {
+        margin-bottom: 7px;
+        font-size: 0.63rem;
+        letter-spacing: 0.12em;
+    }
+
+    .site-title { font-size: 1.6rem; }
+
+    .site-sub {
+        margin-top: 8px;
+        font-size: 0.83rem;
+    }
+
+    .nav a {
+        margin-right: 18px;
+        padding: 11px 0 9px;
+        font-size: 0.72rem;
+    }
+
+    main { padding-top: 28px; }
+
+    .staff {
+        grid-template-columns: 1fr;
+        row-gap: 2px;
+    }
+
+    .staff dt,
+    .staff dd { grid-column: 1; }
+
+    .staff dt:not(:first-of-type) + dd { margin-top: 0; }
+
+    .staff dt { margin-top: 10px; }
+
+    .materials .row { gap: 10px; }
+}
+
+@media print {
+    .nav, footer { display: none; }
+
+    body { background: #fff; font-size: 12pt; }
+
+    .masthead {
+        background: none;
+        border-bottom: 1px solid #000;
+        color: #000;
+    }
+
+    .masthead::after { display: none; }
+
+    .mark { display: none; }
+
+    .site-title, .site-sub, .eyebrow { color: #000; }
+
+    a { color: #000; }
+}
