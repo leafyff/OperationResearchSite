@@ -38,9 +38,23 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
+/* Тло під сторінкою — його видно тільки тоді, коли гортання «перетягує»
+   сторінку за верхній або нижній край. Дві половини закріплені відносно
+   вікна (background-attachment: fixed), тому вгорі завжди тепла темрява
+   під колір шапки, а внизу — під колір підвалу, незалежно від довжини
+   сторінки. Саме полотно лишається паперовим — його малює body. */
 html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
+    overscroll-behavior-x: none;
+    background-color: var(--bg);
+    background-image:
+        radial-gradient(120% 120% at 50% 0%,   #35210f 0%, #14110e 62%),
+        radial-gradient(120% 120% at 50% 100%, #2b1e14 0%, #1b1815 62%);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 50%, 100% 50%;
+    background-position: top, bottom;
+    background-attachment: fixed, fixed;
 }
 
 body {
