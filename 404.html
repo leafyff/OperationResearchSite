@@ -10,10 +10,10 @@
   css/style.css з такої адреси не спрацював би.
 
   З тієї ж причини шлях до картинки і посилання на головну вказані від кореня
-  сайта. Якщо репозиторій називається НЕ username.github.io, сайт лежатиме за
-  адресою username.github.io/назва-репозиторію/ — тоді замініть тут усі три:
-     href="/"                  →  href="/назва-репозиторію/"
-     src="/img/fox-404.webp"   →  src="/назва-репозиторію/img/fox-404.webp"
+  домену. Сайт лежить за адресою leafyff.github.io/OperationResearchSite/, тож
+  усі три шляхи починаються з /OperationResearchSite/. Якщо перейменувати
+  репозиторій, замініть цю частину в усіх трьох; якщо сайт переїде в корінь
+  (репозиторій username.github.io), поверніть href="/" і src="/img/fox-404.webp".
 -->
 <style>
   :root{
@@ -124,14 +124,14 @@
     </svg>
     <div>
       <p class="eyebrow">Київський національний університет імені Тараса Шевченка</p>
-      <div class="site-title"><a href="/"><span class="w">Дослідження</span> <span class="w">операцій</span></a></div>
+      <div class="site-title"><a href="/OperationResearchSite/"><span class="w">Дослідження</span> <span class="w">операцій</span></a></div>
       <p class="site-sub">Факультет комп’ютерних наук та кібернетики</p>
     </div>
   </div>
 </header>
 
 <main>
-  <img class="fox" src="/img/fox-404.webp" width="640" height="640"
+  <img class="fox" src="/OperationResearchSite/img/fox-404.webp" width="640" height="640"
        alt="Лис в окулярах і твідовому піджаку сидить за ноутбуком">
 
   <h1>Сторінку не знайдено</h1>
@@ -140,16 +140,18 @@
   <p>Такої сторінки або файла немає. Можливо, матеріал ще не завантажено
      або посилання застаріло.</p>
 
-  <p><a href="/">Повернутися на головну</a></p>
+  <p><a href="/OperationResearchSite/">Повернутися на головну</a></p>
 </main>
 
 <footer>
   <div class="inner">
-    <p>© Licensed by <a href="https://linktr.ee/les_fox">Oleksandr Drobiazko</a> 2026</p>
+    <p>© Licensed by <a href="https://linktr.ee/les_fox">Oleksandr Drobiazko</a> <span id="year">2026</span></p>
     <p class="org">Faculty of Computer Science and Cybernetics<br>
        Taras Shevchenko National University of Kyiv</p>
   </div>
 </footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 
 </body>
 </html>

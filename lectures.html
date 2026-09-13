@@ -41,7 +41,7 @@
 
 <main>
 
-  <h1>Лекції</h1>
+  <h1>Лекції (орієнтовно)</h1>
   <p class="meta">формат PPTX</p>
 
   <!-- Коли файл покладено в materials/lectures/, замініть
@@ -118,11 +118,13 @@
 
 <footer>
   <div class="inner">
-    <p>© Licensed by <a href="https://linktr.ee/les_fox">Oleksandr Drobiazko</a> 2026</p>
+    <p>© Licensed by <a href="https://linktr.ee/les_fox">Oleksandr Drobiazko</a> <span id="year">2026</span></p>
     <p class="org">Faculty of Computer Science and Cybernetics<br>
        Taras Shevchenko National University of Kyiv</p>
   </div>
 </footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 
 </body>
 </html>

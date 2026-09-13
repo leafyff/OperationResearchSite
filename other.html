@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Інше — Дослідження операцій</title>
-<meta name="description" content="Програма курсу, вимоги до звітів та програмні засоби для розв’язування задач дослідження операцій.">
+<meta name="description" content="Програма курсу та програмні засоби для розв’язування задач дослідження операцій.">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -52,14 +52,6 @@
   <ul class="materials">
     <li><span class="row is-missing"><!-- syllabus.pdf -->
       <span class="m-title">Робоча програма курсу</span>
-      <span class="m-ext">буде додано</span></span></li>
-
-    <li><span class="row is-missing"><!-- report-template.docx -->
-      <span class="m-title">Шаблон звіту з лабораторної роботи</span>
-      <span class="m-ext">буде додано</span></span></li>
-
-    <li><span class="row is-missing"><!-- report-example.pdf -->
-      <span class="m-title">Приклад оформленого звіту</span>
       <span class="m-ext">буде додано</span></span></li>
 
     <li><span class="row is-missing"><!-- exam-questions.pdf -->
@@ -121,11 +113,13 @@
 
 <footer>
   <div class="inner">
-    <p>© Licensed by <a href="https://linktr.ee/les_fox">Oleksandr Drobiazko</a> 2026</p>
+    <p>© Licensed by <a href="https://linktr.ee/les_fox">Oleksandr Drobiazko</a> <span id="year">2026</span></p>
     <p class="org">Faculty of Computer Science and Cybernetics<br>
        Taras Shevchenko National University of Kyiv</p>
   </div>
 </footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 
 </body>
 </html>
