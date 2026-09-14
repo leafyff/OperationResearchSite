@@ -30,7 +30,7 @@ materials/         файли матеріалів
 |---|---|
 | `materials/lectures/` | `lecture-01.pptx` … `lecture-12.pptx` |
 | `materials/practice/` | `practice-01.pdf` … `practice-10.pdf` (заняття 11–14 — захист, без файлів) |
-| `materials/labs/` | `lab-01.pdf` … `lab-10.pdf` |
+| `materials/labs/` | `lab-01.pdf` … `lab-07.pdf`, проєкт — `lab-08.pdf` |
 | `materials/literature/` | імена див. у `literature.html` |
 | `materials/other/` | `syllabus.pdf`, `exam-questions.pdf` |
 
@@ -77,7 +77,7 @@ materials/         файли матеріалів
 
 ### Нумерація змінилася під план 2026
 
-Практичних тепер 14, лабораторних 10. Файли, що були під старою нумерацією
+Практичних тепер 14, лабораторних 7 і проєкт. Файли, що були під старою нумерацією
 2025 року, перейменовано під нову:
 
 | Було | Стало | Зміст |
