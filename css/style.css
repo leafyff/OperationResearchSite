@@ -495,6 +495,7 @@ code {
 .sections li:nth-child(3) { animation-delay: .44s }
 .sections li:nth-child(4) { animation-delay: .51s }
 .sections li:nth-child(5) { animation-delay: .58s }
+.sections li:nth-child(6) { animation-delay: .65s }
 
 .sections a {
     position: relative;
@@ -547,6 +548,172 @@ code {
 /* відступ між групами «Лекції» / «Практичні заняття» */
 .staff dt:not(:first-of-type),
 .staff dt:not(:first-of-type) + dd { margin-top: 12px }
+
+/* --- Жарти --------------------------------------------------------------- */
+
+/* Появу анімує контейнер, а не окремі картки: скрипт сортує список через
+   appendChild, а це перезапускає CSS-анімації переставленого елемента —
+   анімація на самій картці миготіла б при кожному сортуванні. Проїзд
+   картки на нове місце робить скрипт через Web Animations. */
+.jokes {
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+    animation: rowin .6s var(--ease) .25s both;
+}
+
+.joke {
+    position: relative;
+    margin-bottom: 14px;
+    padding: 20px 22px 16px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    background: var(--surface);
+    transition: border-color .35s ease, box-shadow .35s ease;
+}
+
+/* тонка мідна засічка в кутку — та сама «гравюрна» лінія, що в шапці */
+.joke::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 34px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--copper), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .4s var(--ease);
+}
+
+.joke:hover {
+    border-color: #ddd0bc;
+    box-shadow: 0 1px 0 rgba(201, 119, 47, .07), 0 6px 20px -14px rgba(33, 29, 25, .4);
+}
+
+.joke:hover::before { transform: scaleX(1) }
+
+/* жарт, за який голосував цей відвідувач */
+.joke.is-mine { border-color: #e3cfae }
+.joke.is-mine::before { transform: scaleX(1) }
+
+.j-setup,
+.j-text {
+    margin: 0;
+    color: var(--text);
+    font: 400 1.07rem/1.6 var(--serif);
+}
+
+/* Відповідь відбито мідною лінійкою — те саме рішення, що у .note:
+   поворот думки видно раніше, ніж його прочитано. */
+.j-punch {
+    margin: .7rem 0 0;
+    padding-left: 15px;
+    border-left: 2px solid var(--copper);
+    color: var(--ink);
+    font: italic 400 1.07rem/1.6 var(--serif);
+}
+
+.j-foot {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+
+/* --- Кнопка «смішно» ----------------------------------------------------- */
+
+/* Плашка зроблена в розмірі .m-ext — того самого ярлика розширення файла
+   у списках матеріалів, щоб кнопка читалася як частина сайту. */
+.like {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 11px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    background: none;
+    color: var(--muted);
+    font: 400 .72rem/1 var(--sans);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: border-color .3s ease, color .3s ease, background .3s ease;
+}
+
+.like-mark {
+    width: 13px;
+    height: 13px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.like-axis { opacity: .5 }
+
+.like-n {
+    min-width: 1ch;
+    font-size: .82rem;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0;
+}
+
+.like:hover {
+    border-color: var(--copper);
+    background: #fbf4ea;
+    color: var(--link);
+}
+
+/* вістря стрілки підскакує, коли на кнопку наведено */
+.like:hover .like-arrow { animation: nudge .5s var(--ease) }
+
+@keyframes nudge {
+    0%   { transform: none }
+    45%  { transform: translateY(-2px) }
+    100% { transform: none }
+}
+
+.like:active { background: #f6ecdd }
+
+/* уже проголосовано: кнопка лишається у фокусі з клавіатури, тому стан
+   позначено не лише кольором, а й залитою стрілкою й густішим тлом */
+.like.is-mine {
+    border-color: #d9b482;
+    background: #f8efe1;
+    color: var(--link);
+    cursor: default;
+}
+
+.like.is-mine .like-arrow {
+    fill: var(--copper);
+    stroke: var(--copper);
+}
+
+.like.is-mine .like-axis { opacity: .75 }
+
+.like.is-mine:hover .like-arrow { animation: none }
+
+/* «+1», яку скрипт на мить вішає над кнопкою */
+.plus {
+    position: absolute;
+    top: -2px;
+    right: 10px;
+    color: var(--copper);
+    font-size: .82rem;
+    letter-spacing: 0;
+    pointer-events: none;
+}
+
+/* рядок про те, що лічильник не відповів */
+.j-status:empty { display: none }
+
+.j-status {
+    margin: 1.2rem 0 0;
+    color: var(--muted);
+    font-size: .875rem;
+}
 
 /* --- Підвал -------------------------------------------------------------- */
 
@@ -639,6 +806,14 @@ footer a:hover {
     .staff dt { margin-top: 10px }
 
     .materials .row { gap: 10px }
+
+    .joke { padding: 17px 17px 14px }
+
+    .j-setup,
+    .j-text,
+    .j-punch { font-size: 1rem }
+
+    .j-punch { padding-left: 12px }
 }
 
 /* --- Зменшена анімація --------------------------------------------------- */
@@ -656,7 +831,7 @@ footer a:hover {
 /* --- Друк ---------------------------------------------------------------- */
 
 @media print {
-    .nav, footer, .hatch, .grain, .mark { display: none }
+    .nav, footer, .hatch, .grain, .mark, .j-foot, .j-status { display: none }
 
     body { background: #fff; font-size: 12pt }
 
@@ -673,4 +848,6 @@ footer a:hover {
     .site-title { text-shadow: none }
 
     a { color: #000 }
+
+    .joke { border: 1px solid #ccc; page-break-inside: avoid }
 }

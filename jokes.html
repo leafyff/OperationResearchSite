@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Жарти — Дослідження операцій</title>
+<meta name="description" content="Жарти про дослідження операцій. Голосування: що більше лайків, то вище жарт у списку.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="hatch"></div>
+  <div class="grain"></div>
+  <div class="inner">
+    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+      <path class="axes" d="M7 5V41H43"/>
+      <path class="region" d="M7 41V22L18 12L34 15L40 41Z"/>
+      <circle class="opt" cx="18" cy="12" r="3"/>
+    </svg>
+    <div>
+      <p class="eyebrow fade">Київський національний університет імені Тараса Шевченка</p>
+      <div class="site-title"><a href="index.html"><span class="w">Дослідження</span> <span class="w">операцій</span></a></div>
+      <p class="site-sub fade d2">Факультет комп’ютерних наук та кібернетики</p>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="inner">
+    <ul>
+      <li><a href="index.html">Про курс</a></li>
+      <li><a href="lectures.html">Лекції</a></li>
+      <li><a href="practice.html">Практичні</a></li>
+      <li><a href="labs.html">Лабораторні</a></li>
+      <li><a href="literature.html">Література</a></li>
+      <li><a href="other.html">Інше</a></li>
+      <li><a href="jokes.html" aria-current="page">Жарти</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <h1>Жарти</h1>
+  <p class="meta">цільова функція — підняти настрій, обмеження — одне на людину</p>
+
+  <p class="lead">Жарти вгорі списку — ті, що зібрали найбільше лайків. Кожен
+     може підтримати жарт один раз; забрати лайк назад не вийде, тож тисніть
+     свідомо.</p>
+
+  <!-- Порядок жартів у розмітці — це порядок за замовчуванням: він працює,
+       навіть якщо лічильник недоступний, і служить тай-брейком для жартів
+       з однаковою кількістю лайків. Кнопки лайків додає скрипт унизу
+       сторінки, тому без JavaScript сторінка показує просто список жартів,
+       а не мертві кнопки. Атрибут data-id — ключ лічильника, не змінюйте
+       його в наявних жартах, інакше лайки «загубляться». -->
+  <ul class="jokes" id="jokes">
+
+    <li class="joke" data-id="joke-01">
+      <p class="j-setup">Чому студент з ДО розплакався на іспиті?</p>
+      <p class="j-punch">Його амбіції були безмежними, але цільова функція
+         вперто прямувала до мінус нескінченності.</p>
+    </li>
+
+    <li class="joke" data-id="joke-02">
+      <p class="j-setup">Чому Чак Норріс не займається лінійним програмуванням?</p>
+      <p class="j-punch">Для нього не існує жодних обмежень.</p>
+    </li>
+
+    <li class="joke" data-id="joke-03">
+      <p class="j-setup">Як фахівець з ДО освідчується в коханні?</p>
+      <p class="j-punch">«Ти моя цільова функція. І я хочу максимізувати час,
+         проведений з тобою, за умови обмеження мого бюджету.»</p>
+    </li>
+
+    <li class="joke" data-id="joke-04">
+      <p class="j-setup">Чому фахівець з ДО ніколи не виходить за межі своєї кімнати?</p>
+      <p class="j-punch">Тому що він цілком задоволений своєю областю допустимих
+         розв’язків і боїться порушити обмеження.</p>
+    </li>
+
+    <li class="joke" data-id="joke-05">
+      <p class="j-setup">Лікар каже пацієнту-оптимізатору: «Вам залишилося жити
+         три місяці».</p>
+      <p class="j-punch">Пацієнт: «Лікарю, а це жорстке обмеження чи ми можемо
+         ввести штрафну функцію і трохи його послабити?»</p>
+    </li>
+
+    <li class="joke" data-id="joke-06">
+      <p class="j-text">Наприкінці курсу з методів оптимізації професор глянув
+         на студентів і промовив: «Є одна остання порада, яку я мушу вам дати.
+         Ніколи, за жодних обставин, не намагайтеся оптимізувати власне життя.
+         Моїй дружині потрібно було близько пів години, щоб приготувати сніданок
+         для нас обох. А тепер, після того як я застосував свої експертні
+         знання, це займає в мене менше ніж п’ятнадцять хвилин… але вона мене
+         покинула».</p>
+    </li>
+
+    <li class="joke" data-id="joke-07">
+      <p class="j-text">Дослідник операцій — це людина, яка розв’язує проблему,
+         про яку ви не знали, способом, якого ви не розумієте.</p>
+    </li>
+
+    <li class="joke" data-id="joke-08">
+      <p class="j-setup">Чому дослідник операцій не переходить дорогу?</p>
+      <p class="j-punch">Ще не довів, що розв’язок на іншому боці оптимальний.</p>
+    </li>
+
+    <li class="joke" data-id="joke-09">
+      <p class="j-setup">Я запитав свого професора з дослідження операцій,
+         чи є життя лінійним.</p>
+      <p class="j-punch">Він відповів: «Тільки якщо ігнорувати всі обмеження».</p>
+    </li>
+
+    <li class="joke" data-id="joke-10">
+      <p class="j-text">Усі моделі хибні, але деякі корисні… особливо коли
+         начальник вимагає таблицю до п’ятої вечора.</p>
+    </li>
+
+    <li class="joke" data-id="joke-11">
+      <p class="j-setup">Чому дослідники операцій ненавидять стояти в черзі?</p>
+      <p class="j-punch">Тому що вони розрахували очікуваний час перебування
+         тут… і це пригнічує.</p>
+    </li>
+
+    <li class="joke" data-id="joke-12">
+      <p class="j-setup">Практикум з формалізації задач:</p>
+      <p class="j-punch">«Нехай сарай — це сімейство однакових сфер-корів
+         радіусів r у вакуумі…»</p>
+    </li>
+
+    <li class="joke" data-id="joke-13">
+      <p class="j-text">Перше правило дослідження операцій: якщо модель не
+         відповідає реальності, то змініть реальність.</p>
+    </li>
+
+  </ul>
+
+  <p class="j-status" id="j-status" role="status" aria-live="polite"></p>
+
+  <div class="note">
+    <p>Є чим поповнити розділ? Надішліть жарт
+       <a href="https://linktr.ee/EvgenOsmak">Євгену Осьмаку</a> — або додайте
+       його до <code>jokes.html</code> самі: скопіюйте будь-який блок
+       <code>&lt;li class="joke"&gt;</code> і дайте йому новий
+       <code>data-id</code>.</p>
+  </div>
+
+  <!-- Розмітка кнопки лайка. Лежить у <template>, тому браузер її не показує,
+       поки скрипт не зробить копію для кожного жарта. -->
+  <template id="like-tpl">
+    <div class="j-foot">
+      <button class="like" type="button" aria-pressed="false">
+        <svg class="like-mark" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+          <path class="like-axis" d="M2.5 13.5H14"/>
+          <path class="like-arrow" d="M8 11.6V3.4M4.6 6.8 8 3.2l3.4 3.6"/>
+        </svg>
+        <span class="like-n">·</span>
+        <span class="like-word">смішно</span>
+      </button>
+    </div>
+  </template>
+
+</main>
+
+<footer>
+  <div class="inner">
+    <p>© Licensed by <a href="https://linktr.ee/les_fox">Oleksandr Drobiazko</a> <span id="year">2026</span></p>
+    <p class="org">Faculty of Computer Science and Cybernetics<br>
+       Taras Shevchenko National University of Kyiv</p>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+<!-- --- Лайки ---------------------------------------------------------------
+
+     Лічильники тримає Abacus (abacus.jasoncameron.dev) — безкоштовний сервіс
+     лічильників без реєстрації. Жодних ключів у коді немає: /hit збільшує
+     значення на одиницю, /get читає його. Зворотного боку в цього немає —
+     зменшити лічильник без адмінського ключа не можна, тому лайк тут
+     остаточний, і кнопка після натискання блокується.
+
+     NS — простір імен. За домовленістю сервісу це домен сайту, щоб ключі не
+     зіткнулися з чужими. Якщо сайт переїде на інший домен, лічильники
+     лишаться на старому NS: або не змінюйте рядок, або змініть — і тоді
+     голосування почнеться з нуля.
+
+     «Одна людина — один лайк» тримається на localStorage браузера. Це межа
+     можливого без реєстрації користувачів: той, хто дуже хоче, проголосує
+     ще раз з іншого браузера.
+
+     Якщо сервіс недоступний, скрипт просто прибирає кнопки й показує про це
+     рядок: жарти лишаються на місці в порядку розмітки.                     -->
+<script>
+(function () {
+  "use strict";
+
+  var API   = "https://abacus.jasoncameron.dev";
+  var NS    = "leafyff.github.io";
+  var STORE = "or-jokes-liked";
+  var CACHE = "or-jokes-counts";
+  var FRESH = 60000;              // скільки кеш лічильників вважати свіжим, мс
+
+  var list = document.getElementById("jokes");
+  var tpl  = document.getElementById("like-tpl");
+  var out  = document.getElementById("j-status");
+  if (!list || !tpl || !tpl.content || !window.fetch) return;
+
+  var cards = Array.prototype.slice.call(list.children);
+  var count = Object.create(null);   // data-id -> скільки лайків
+  var home  = new Map();             // картка -> місце в розмітці (тай-брейк)
+  cards.forEach(function (el, i) { home.set(el, i); });
+
+  var slow = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  /* --- Пам'ять браузера -------------------------------------------------- */
+
+  /* У приватному вікні звернення до localStorage кидає виняток, тому кожне
+     обгорнуте в try. Без пам'яті сторінка працює, просто не згадає лайк. */
+  function liked() {
+    try {
+      return new Set(JSON.parse(localStorage.getItem(STORE) || "[]"));
+    } catch (e) {
+      return new Set();
+    }
+  }
+
+  function keep(id, yes) {
+    try {
+      var all = liked();
+      if (yes) { all.add(id); } else { all.delete(id); }
+      localStorage.setItem(STORE, JSON.stringify(Array.from(all)));
+    } catch (e) { /* не змогли запам'ятати — не біда */ }
+  }
+
+  /* --- Кеш лічильників --------------------------------------------------- */
+
+  /* Жартів тринадцять, тобто тринадцять запитів на кожне відкриття сторінки,
+     а безкоштовний Abacus дозволяє тридцять на десять секунд з однієї адреси.
+     Два швидкі перезавантаження — і ліміт вичерпано. Тому свіжі значення
+     лежать у localStorage: протягом хвилини сторінка не питає сервіс узагалі,
+     а якщо той відмовив — показує останні відомі числа замість нічого. */
+  function cached() {
+    try {
+      var c = JSON.parse(localStorage.getItem(CACHE) || "null");
+      if (c && c.v) return c;
+    } catch (e) { /* немає — то й немає */ }
+    return null;
+  }
+
+  function cache(v) {
+    try {
+      localStorage.setItem(CACHE, JSON.stringify({ t: Date.now(), v: v }));
+    } catch (e) { /* те саме */ }
+  }
+
+  /* --- Сервіс лічильників ------------------------------------------------ */
+
+  function ask(path, id) {
+    return fetch(API + "/" + path + "/" + NS + "/" + id, { cache: "no-store" })
+      .then(function (r) {
+        if (r.status === 404) return { value: 0 };   // ключа ще немає
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then(function (d) { return Number(d.value) || 0; });
+  }
+
+  /* --- Число словами ----------------------------------------------------- */
+
+  function plural(n, one, few, many) {
+    var d = n % 10, dd = n % 100;
+    if (d === 1 && dd !== 11) return one;
+    if (d >= 2 && d <= 4 && (dd < 12 || dd > 14)) return few;
+    return many;
+  }
+
+  /* --- Стан кнопки ------------------------------------------------------- */
+
+  /* Кнопку не роблю disabled: такі кнопки не отримують фокус, і з клавіатури
+     вже не дочитати, скільки жарт зібрав лайків. Тому aria-disabled плюс
+     перевірка в обробнику. */
+  function paint(card, btn, n, mine) {
+    btn.querySelector(".like-n").textContent = n;
+    btn.setAttribute("aria-label",
+      "Смішно: " + n + " " + plural(n, "лайк", "лайки", "лайків") +
+      (mine ? ". Ваш лайк уже зараховано" : ""));
+    btn.setAttribute("aria-pressed", mine ? "true" : "false");
+    btn.setAttribute("aria-disabled", mine ? "true" : "false");
+    btn.classList.toggle("is-mine", mine);
+    card.classList.toggle("is-mine", mine);
+  }
+
+  /* Мідна «+1», що спливає над кнопкою. Суто оздоба: якщо Web Animations
+     немає або рух вимкнено, її просто не буде. */
+  function plusOne(btn) {
+    if (slow.matches || !btn.animate) return;
+    var tag = document.createElement("span");
+    tag.className = "plus";
+    tag.setAttribute("aria-hidden", "true");
+    tag.textContent = "+1";
+    btn.appendChild(tag);
+    tag.animate(
+      [{ opacity: 0, transform: "translateY(2px)" },
+       { opacity: 1, transform: "translateY(-11px)", offset: .35 },
+       { opacity: 0, transform: "translateY(-27px)" }],
+      { duration: 900, easing: "cubic-bezier(.22,1,.36,1)" }
+    ).onfinish = function () { tag.remove(); };
+  }
+
+  /* --- Перестановка ------------------------------------------------------ */
+
+  /* Спершу запам'ятовуємо, де рядки стояли, потім переставляємо їх у DOM,
+     а потім кожному даємо проїхати з давнього місця на нове (FLIP). Без
+     цього список стрибав би — і коли приходять лічильники, і після лайка.
+
+     Саму появу карток анімує контейнер .jokes, а не кожна картка окремо:
+     appendChild виймає елемент із документа й вставляє назад, а це перезапускає
+     його CSS-анімації. Анімація на картці миготіла б при кожному сортуванні. */
+  function resort() {
+    var was = new Map();
+    cards.forEach(function (el) { was.set(el, el.getBoundingClientRect().top); });
+
+    cards.slice()
+      .sort(function (a, b) {
+        return (count[b.dataset.id] - count[a.dataset.id]) ||
+               (home.get(a) - home.get(b));
+      })
+      .forEach(function (el) { list.appendChild(el); });
+
+    if (slow.matches) return;
+    cards.forEach(function (el) {
+      var dy = was.get(el) - el.getBoundingClientRect().top;
+      if (!dy || !el.animate) return;
+      el.animate(
+        [{ transform: "translateY(" + dy + "px)" }, { transform: "none" }],
+        { duration: 560, easing: "cubic-bezier(.22,1,.36,1)" }
+      );
+    });
+  }
+
+  /* --- Голосування ------------------------------------------------------- */
+
+  function vote(card, btn, id) {
+    var before = count[id];
+
+    /* Показуємо результат одразу, не чекаючи на відповідь: якщо запит
+       не пройде, повертаємо все як було. */
+    count[id] = before + 1;
+    paint(card, btn, count[id], true);
+    plusOne(btn);
+    keep(id, true);
+    resort();
+
+    ask("hit", id).then(function (n) {
+      count[id] = n;                       // слово сервера — останнє
+      paint(card, btn, n, true);
+      cache(count);
+      out.textContent = "";
+      resort();
+    }).catch(function () {
+      count[id] = before;
+      keep(id, false);
+      paint(card, btn, before, false);
+      out.textContent = "Лайк не зберігся — лічильник не відповів. Спробуйте ще раз.";
+      resort();
+    });
+  }
+
+  /* --- Запуск ------------------------------------------------------------ */
+
+  var mine = liked();
+
+  var feet = cards.map(function (card) {
+    var foot = tpl.content.firstElementChild.cloneNode(true);
+    var btn  = foot.querySelector(".like");
+    var id   = card.dataset.id;
+
+    btn.addEventListener("click", function () {
+      if (btn.getAttribute("aria-disabled") === "true") return;
+      vote(card, btn, id);
+    });
+
+    card.appendChild(foot);
+    return { card: card, foot: foot, btn: btn, id: id };
+  });
+
+  function show(nums) {
+    cards.forEach(function (card) {
+      count[card.dataset.id] = nums[card.dataset.id] || 0;
+    });
+    feet.forEach(function (f) { paint(f.card, f.btn, count[f.id], mine.has(f.id)); });
+    resort();
+  }
+
+  var have = cached();
+
+  if (have && Date.now() - have.t < FRESH) {
+    show(have.v);
+  } else {
+    Promise.all(cards.map(function (card) {
+      return ask("get", card.dataset.id);
+    })).then(function (nums) {
+      var fresh = Object.create(null);
+      cards.forEach(function (card, i) { fresh[card.dataset.id] = nums[i]; });
+      cache(fresh);
+      show(fresh);
+    }).catch(function () {
+      if (have) {
+        /* Сервіс не відповів, але вчорашні числа краще за порожнє місце. */
+        show(have.v);
+        out.textContent = "Лічильник лайків не відповів — показано останні відомі числа.";
+        return;
+      }
+      /* Нічого не знаємо — прибираємо кнопки, щоб не обіцяти того, чого
+         сторінка зараз не може. Жарти лишаються. */
+      feet.forEach(function (f) { f.foot.remove(); });
+      out.textContent = "Лічильник лайків зараз недоступний — жарти показані в звичайному порядку.";
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
