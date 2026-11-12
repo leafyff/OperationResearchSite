@@ -373,6 +373,25 @@ code {
 
 .note p { margin: 0 }
 
+/* правила, які треба прочитати до списку: стоїть над ним і не приглушена */
+.note.important {
+    margin: 0 0 1.7rem;
+    color: var(--text);
+    font-size: .95rem;
+}
+
+.note.important strong { color: var(--ink) }
+
+.note.important ul {
+    margin: .45rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.note.important li + li { margin-top: .2rem }
+
+/* довга назва файла не має виходити за край на вузькому екрані */
+.note.important code { overflow-wrap: anywhere }
+
 /* --- Списки матеріалів --------------------------------------------------- */
 
 .materials {
